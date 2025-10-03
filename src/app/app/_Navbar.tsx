@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { SignOutButton, useClerk } from "@clerk/nextjs";
 import Link from "next/link";
-import { UserAvatar } from "@/components/UserAvatar";
+import { UserAvatar } from "@/features/users/components/UserAvatar";
 
 export function Navbar({ user }: { user: { name: string; imageUrl: string } }) {
   const { openUserProfile } = useClerk();

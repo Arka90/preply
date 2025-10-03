@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { db } from "@/drizzle/db";
 import { JobInfoTable } from "@/drizzle/schema";
+import { JobInfoForm } from "@/features/jobinfos/components/jobInfoForm";
 import { getJobInfoUserTag } from "@/features/jobinfos/dbCache";
 import { getCurrentUser } from "@/services/clerk/lib/getCurrentUser";
 import { desc, eq } from "drizzle-orm";
@@ -49,7 +50,9 @@ function NoJobInfos() {
         test interviews will be to the real thing.
       </p>
       <Card>
-        <CardContent></CardContent>
+        <CardContent>
+          <JobInfoForm />
+        </CardContent>
       </Card>
     </div>
   );

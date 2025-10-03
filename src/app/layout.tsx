@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@/services/clerk/components/ClerkProvider";
 import { ThemeProvider } from "next-themes";
+import { Toaster } from "sonner";
 
 const outfitSans = Outfit({
   variable: "--font-outfit-sans",
@@ -23,6 +24,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html suppressHydrationWarning lang="en">
         <body className={`${outfitSans.variable} antialiased font-sans`}>
+          <Toaster />
           <ThemeProvider
             attribute="class"
             defaultTheme="system"

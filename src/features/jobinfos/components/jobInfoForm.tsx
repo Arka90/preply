@@ -154,10 +154,10 @@ export function JobInfoForm({
 
         <Button
           type="submit"
-          disabled={form.formState.isLoading}
+          disabled={form.formState.isSubmitting}
           className="w-full"
         >
-          <LoadingSwap isLoading={form.formState.isLoading}>
+          <LoadingSwap isLoading={form.formState.isSubmitting}>
             Save Job Info
           </LoadingSwap>
         </Button>

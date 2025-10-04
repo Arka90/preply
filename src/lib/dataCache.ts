@@ -11,3 +11,7 @@ export function getUserTag(tag: CacheTag, userId: string) {
 export function getIdTag(tag: CacheTag, id: string) {
   return `id:${id}:${tag}` as const;
 }
+
+export function getJobInfoTag(tag: CacheTag, JobInfoId: string) {
+  return `jobInfo:${JobInfoId}:${tag}` as const;
+}
